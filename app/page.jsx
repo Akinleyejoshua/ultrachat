@@ -17,7 +17,7 @@ export default function Home() {
   const [created, setCreated] = useState(false);
 
 
-  const socketRef = useRef(io("https://ultrachat-api.vercel.app/", { autoConnect: false }));
+  const socketRef = useRef(io("https://ultrachat-api.vercel.app", { autoConnect: false }));
 
   const open = () => {
     socketRef.current.emit("logged-in", input);
